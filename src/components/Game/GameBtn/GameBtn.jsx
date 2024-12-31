@@ -1,10 +1,18 @@
+import { useContext } from "react"
+import { Context } from "../../../context/Context"
 import "./GameBtn.css"
 
 const GameBtn = () => {
-  return (
-    <button className="Game__btn">
-        GameBtn
-    </button>
-  )
+    const { start, setStart } = useContext(Context)
+
+    const handleClick = () => {
+        setStart(prev => !prev)
+    }
+
+    return (
+        <button className="Game__btn" onClick={handleClick}>
+            {start ? "PAUSE" : "START"}
+        </button>
+    )
 }
 export default GameBtn

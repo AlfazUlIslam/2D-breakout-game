@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react"
 import { Context } from "../../../context/Context"
 
-const CounterTracker = () => {
+const CountTracker = () => {
     const { count, setCount } = useContext(Context)
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const CounterTracker = () => {
       }, [])
         
     return (
-        <div>CounterTracker{count}</div>
+      <></>
     )
 }
-export default CounterTracker
+export default CountTracker

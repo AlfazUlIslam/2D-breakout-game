@@ -2,7 +2,7 @@ import { useContext } from "react"
 
 import GameWindow from "./GameWindow/GameWindow"
 import GameBtn from "./GameBtn/GameBtn"
-import CounterTracker from "./CounterTracker/CounterTracker"
+import CountTracker from "./CountTracker/CountTracker"
 import { Context } from "../../context/Context"
 import "./Game.css"
 
@@ -14,7 +14,7 @@ const Game = () => {
             <GameWindow />
             <GameBtn />
             {/* Conditionally mount/unmount CountTracker */}
-            {start && <CounterTracker />}
+            {start && <CountTracker />}
         </div>
     )
 }

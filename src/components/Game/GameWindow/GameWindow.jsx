@@ -12,8 +12,7 @@ const GameWindow = () => {
 
     return (
         <div className="Game__window">
-            GameWindow
-            <div className="Game__ball" style={gameBall}>GameBall</div>
+            <div className="Game__ball" style={gameBall}></div>
         </div>
     )
 }

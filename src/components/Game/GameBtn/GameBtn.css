@@ -5,6 +5,7 @@
     background: #663399;
     font-size: 1rem;
     color: #FFF;
+    cursor: pointer;
     transition: linear 0.4s;
 }
 

@@ -21,8 +21,8 @@ export const Provider = (props) => {
     const [windowWidth, setWindowWidth] = useState(50)
     const [windowHeight, setWindowHeight] = useState(35)
     const [ballDiameter, setBallDiameter] = useState(1)
-    const [x, setX] = useState(0)
-    const [y, setY] = useState(0)
+    const [x, setX] = useState(windowWidth / 2)
+    const [y, setY] = useState(windowHeight - ((windowHeight / 7) * 6))
 
     const value = {
         start, 

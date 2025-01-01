@@ -3,11 +3,11 @@ import { Context } from "../../../context/Context"
 import "./GameWindow.css"
 
 const GameWindow = () => {
-    const { count } = useContext(Context)
-
+    const { x, y } = useContext(Context)
+  
     const gameBall = {
-        left: `${count}px`,
-        bottom: `${count}px`
+        left: `${x}rem`, 
+        bottom: `${y}rem`
     }
 
     return (

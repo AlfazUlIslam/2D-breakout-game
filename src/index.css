@@ -4,3 +4,16 @@
     box-sizing: border-box;
     font: inherit;
 }
+
+/* Reset for button */
+button {
+    all: unset; /* Removes all default styling */
+    appearance: none; /* Ensures no default appearance (especially in some browsers like macOS Safari) */
+    background: transparent; /* Makes background transparent */
+    border: none; /* Removes borders */
+    padding: 0; /* Removes default padding */
+    /* font: inherit; Inherits the font properties from the parent element */
+    /* cursor: pointer; Ensures the pointer cursor when hovering over the button */
+    text-align: center; /* Aligns text in the center */
+    line-height: 1; /* Resets line-height */
+}

@@ -1,0 +1,5 @@
+.Game__ball {
+    border-radius: 50%;
+    background: #663399;
+    position: absolute;
+}

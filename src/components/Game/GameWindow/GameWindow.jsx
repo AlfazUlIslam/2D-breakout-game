@@ -1,25 +1,23 @@
 import { useContext } from "react"
 import { Context } from "../../../context/Context"
+import Ball from "../Ball/Ball"
+import Paddle from "../Paddle/Paddle"
 import "./GameWindow.css"
 
 const GameWindow = () => {
-    const { x, y, windowWidth, windowHeight, ballDiameter } = useContext(Context)
+    const { windowWidth, windowHeight, paddleX } = useContext(Context)
   
     const gameWindow = {
         width: `${windowWidth}rem`,
         height: `${windowHeight}rem`
     }
 
-    const gameBall = {
-        width: `${ballDiameter}rem`,
-        height: `${ballDiameter}rem`,
-        left: `${x}rem`, 
-        bottom: `${y}rem`
-    }
-
     return (
         <div className="Game__window" style={gameWindow}>
-            <div className="Game__ball" style={gameBall}></div>
+            {`windowWidth: ${windowWidth}`} <br />
+            {`paddleX: ${paddleX}`}
+            <Ball />
+            <Paddle />
         </div>
     )
 }

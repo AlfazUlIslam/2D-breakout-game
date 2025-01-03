@@ -12,7 +12,11 @@ export const Context = createContext({
     windowHeight: 0,
     setWindowHeight: () => {},
     ballDiameter: 0,
-    setBallDiameter: () => {}
+    setBallDiameter: () => {},
+    paddleDimensions: 0,
+    setPaddleDimensions: () => {},
+    paddleX: 0,
+    setPaddleX: () => {}
 })
 
 export const Provider = (props) => {
@@ -23,6 +27,8 @@ export const Provider = (props) => {
     const [ballDiameter, setBallDiameter] = useState(1)
     const [x, setX] = useState(windowWidth / 2)
     const [y, setY] = useState(windowHeight - ((windowHeight / 7) * 6))
+    const [paddleDimensions, setPaddleDimensions] = useState({w: 6, h: 1})
+    const [paddleX, setPaddleX] = useState((windowWidth - paddleDimensions.w) / 2)
 
     const value = {
         start, 
@@ -36,7 +42,11 @@ export const Provider = (props) => {
         ballDiameter,
         setWindowWidth,
         setWindowHeight,
-        setBallDiameter
+        setBallDiameter,
+        paddleDimensions,
+        setPaddleDimensions,
+        paddleX,
+        setPaddleX
     }
 
     return (

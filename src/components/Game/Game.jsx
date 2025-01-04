@@ -1,17 +1,16 @@
-import { useContext } from "react"
-
 import GameWindow from "./GameWindow/GameWindow"
+import Ball from "./Ball/Ball"
+import Paddle from "./Paddle/Paddle"
 import GameBtn from "./GameBtn/GameBtn"
-// import CountTracker from "./CountTracker/CountTracker"
-import { Context } from "../../context/Context"
 import "./Game.css"
 
 const Game = () => {
-    const { start } = useContext(Context)
-
     return (
         <div className="Game">
-            <GameWindow />
+            <GameWindow>
+                <Ball />
+                <Paddle />
+            </GameWindow>
             <GameBtn />
         </div>
     )

@@ -1,10 +1,9 @@
 import { useContext } from "react"
 import { Context } from "../../../context/Context"
-import Ball from "../Ball/Ball"
-import Paddle from "../Paddle/Paddle"
 import "./GameWindow.css"
 
-const GameWindow = () => {
+const GameWindow = (props) => {
+    const { children } = props
     const { windowWidth, windowHeight } = useContext(Context)
   
     const gameWindow = {
@@ -14,8 +13,7 @@ const GameWindow = () => {
 
     return (
         <div className="Game__window" style={gameWindow}>
-            <Ball />
-            <Paddle />
+            {children}
         </div>
     )
 }

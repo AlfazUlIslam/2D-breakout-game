@@ -21,9 +21,6 @@ export const Context = createContext({
     setIsForwardsX: () => {},
     isForwardsY: true,
     setIsForwardsY: () => {},
-
-    refX: 0,
-    refY: 0
 })
 
 export const Provider = (props) => {
@@ -35,15 +32,9 @@ export const Provider = (props) => {
     const [paddleDimensions, setPaddleDimensions] = useState({w: 6, h: 1})
     const [paddleX, setPaddleX] = useState((windowWidth - paddleDimensions.w) / 2)
     const [isForwardsX, setIsForwardsX] = useState(true)
-  const [isForwardsY, setIsForwardsY] = useState(true)
-    
-    // const [x, setX] = useState(windowWidth / 2)
-    // const [y, setY] = useState(windowHeight - ((windowHeight / 7) * 6))
+    const [isForwardsY, setIsForwardsY] = useState(true)
     const [x, setX] = useState(windowWidth / 2)
     const [y, setY] = useState(windowHeight - ((windowHeight / 7) * 6))
-
-    let refX = useRef(windowWidth / 2).current
-    let refY = useRef(windowHeight - ((windowHeight / 7) * 6)).current
 
     const value = {
         start, 
@@ -65,10 +56,7 @@ export const Provider = (props) => {
         isForwardsX,
         setIsForwardsX,
         isForwardsY,
-        setIsForwardsY,
-
-        refX,
-        refY
+        setIsForwardsY
     }
 
     return (

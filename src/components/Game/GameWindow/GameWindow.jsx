@@ -5,8 +5,7 @@ import Paddle from "../Paddle/Paddle"
 import "./GameWindow.css"
 
 const GameWindow = () => {
-    const { windowWidth, windowHeight, paddleX, x, y } = useContext(Context)
-    let { refX, refY } = useContext(Context)
+    const { windowWidth, windowHeight } = useContext(Context)
   
     const gameWindow = {
         width: `${windowWidth}rem`,
@@ -15,10 +14,6 @@ const GameWindow = () => {
 
     return (
         <div className="Game__window" style={gameWindow}>
-            {`x: ${x}`} <br />
-            {`y: ${y}`} <br />
-            {`refX: ${refX}`} <br />
-            {`refY: ${refY}`} <br />
             <Ball />
             <Paddle />
         </div>

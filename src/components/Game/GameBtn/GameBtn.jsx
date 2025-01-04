@@ -5,7 +5,8 @@ import "./GameBtn.css"
 const GameBtn = () => {
     const { start, setStart } = useContext(Context)
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault()
         setStart(prev => !prev)
     }
 

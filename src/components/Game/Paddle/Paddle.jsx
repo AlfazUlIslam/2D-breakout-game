@@ -34,15 +34,11 @@ const Paddle = () => {
 
     useEffect(() => {
         if (start) {
-            // window.addEventListener("keydown", keyDownHandler)
-            // window.addEventListener("keyup", keyUpHandler)
             window.addEventListener("keydown", handleKeypress)
         }
 
         return () => {
             if (start) {
-                // window.removeEventListener("keydown", keyDownHandler)
-                // window.removeEventListener("keyup", keyUpHandler)
                 window.removeEventListener("keydown", handleKeypress)
             }
         }
@@ -51,12 +47,7 @@ const Paddle = () => {
     return (
         // Game paddle
         <div className="Game__paddle" style={gamePaddle}>
-            {/* {start ? "Running" : "Paused"}
-            {leftPressed ? "Left Pressed" : ""}
-            {rightPressed ? "Right Pressed" : ""} */}
-            {/* {paddleX}
-            {windowWidth - paddleDimensions.w} */}
-            {paddleX}
+            
         </div>
     )
 }
